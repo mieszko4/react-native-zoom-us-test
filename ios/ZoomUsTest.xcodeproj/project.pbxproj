@@ -41,6 +41,7 @@
 		35CCFBB0213C0D5B00B3DF59 /* MobileRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */; };
 		35CCFBB1213C0E0600B3DF59 /* MobileRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */; };
 		35CCFBB2213C0E0600B3DF59 /* MobileRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35CCFBB5213C0EA200B3DF59 /* MobileRTCResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 35CCFBB4213C0EA200B3DF59 /* MobileRTCResources.bundle */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		69EA7D109B2D4ACB927F6025 /* libRNZoomUs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295B5A77FE664CA4A96D0655 /* libRNZoomUs.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -372,6 +373,7 @@
 		35CCFAA7213C0B3500B3DF59 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		35CCFAA9213C0B4700B3DF59 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileRTC.framework; path = "../node_modules/react-native-zoom-us/ios/libs/MobileRTC.framework"; sourceTree = "<group>"; };
+		35CCFBB4213C0EA200B3DF59 /* MobileRTCResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MobileRTCResources.bundle; path = "../node_modules/react-native-zoom-us/ios/libs/MobileRTCResources.bundle"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -634,6 +636,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				35CCFBB4213C0EA200B3DF59 /* MobileRTCResources.bundle */,
 				13B07FAE1A68108700A75B9A /* ZoomUsTest */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ZoomUsTestTests */,
@@ -1126,6 +1129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CCFBB5213C0EA200B3DF59 /* MobileRTCResources.bundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
