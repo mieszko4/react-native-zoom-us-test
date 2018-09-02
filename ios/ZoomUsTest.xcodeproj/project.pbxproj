@@ -39,6 +39,8 @@
 		35CCFAA8213C0B3500B3DF59 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFAA7213C0B3500B3DF59 /* libstdc++.6.0.9.tbd */; };
 		35CCFAAA213C0B4800B3DF59 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFAA9213C0B4700B3DF59 /* libz.1.2.5.tbd */; };
 		35CCFBB0213C0D5B00B3DF59 /* MobileRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */; };
+		35CCFBB1213C0E0600B3DF59 /* MobileRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */; };
+		35CCFBB2213C0E0600B3DF59 /* MobileRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		69EA7D109B2D4ACB927F6025 /* libRNZoomUs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295B5A77FE664CA4A96D0655 /* libRNZoomUs.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -328,6 +330,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		35CCFBB3213C0E0600B3DF59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				35CCFBB2213C0E0600B3DF59 /* MobileRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
@@ -386,6 +402,7 @@
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				35CCFBB1213C0E0600B3DF59 /* MobileRTC.framework in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
@@ -678,6 +695,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				35CCFBB3213C0E0600B3DF59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
