@@ -38,6 +38,7 @@
 		35CCFAA6213C0B2700B3DF59 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFAA5213C0B2700B3DF59 /* libsqlite3.tbd */; };
 		35CCFAA8213C0B3500B3DF59 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFAA7213C0B3500B3DF59 /* libstdc++.6.0.9.tbd */; };
 		35CCFAAA213C0B4800B3DF59 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFAA9213C0B4700B3DF59 /* libz.1.2.5.tbd */; };
+		35CCFBB0213C0D5B00B3DF59 /* MobileRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		69EA7D109B2D4ACB927F6025 /* libRNZoomUs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295B5A77FE664CA4A96D0655 /* libRNZoomUs.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -191,6 +192,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
+		};
+		35CCFBAD213C0D3900B3DF59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD14DD67ED4E47EA8128C7A4 /* RNZoomUs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNZoomUs;
 		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -347,6 +355,7 @@
 		35CCFAA5213C0B2700B3DF59 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		35CCFAA7213C0B3500B3DF59 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		35CCFAA9213C0B4700B3DF59 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileRTC.framework; path = "../node_modules/react-native-zoom-us/ios/libs/MobileRTC.framework"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -367,6 +376,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CCFBB0213C0D5B00B3DF59 /* MobileRTC.framework in Frameworks */,
 				35CCFAAA213C0B4800B3DF59 /* libz.1.2.5.tbd in Frameworks */,
 				35CCFAA8213C0B3500B3DF59 /* libstdc++.6.0.9.tbd in Frameworks */,
 				35CCFAA6213C0B2700B3DF59 /* libsqlite3.tbd in Frameworks */,
@@ -532,6 +542,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35CCFBAF213C0D5B00B3DF59 /* MobileRTC.framework */,
 				35CCFAA9213C0B4700B3DF59 /* libz.1.2.5.tbd */,
 				35CCFAA7213C0B3500B3DF59 /* libstdc++.6.0.9.tbd */,
 				35CCFAA5213C0B2700B3DF59 /* libsqlite3.tbd */,
@@ -546,6 +557,14 @@
 				295B5A77FE664CA4A96D0655 /* libRNZoomUs.a */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		35CCFB85213C0D3900B3DF59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35CCFBAE213C0D3900B3DF59 /* libRNZoomUs.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
@@ -793,6 +812,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 35CCFB85213C0D3900B3DF59 /* Products */;
+					ProjectRef = BD14DD67ED4E47EA8128C7A4 /* RNZoomUs.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -936,6 +959,13 @@
 			fileType = archive.ar;
 			path = "libprivatedata-tvOS.a";
 			remoteRef = 2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		35CCFBAE213C0D3900B3DF59 /* libRNZoomUs.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNZoomUs.a;
+			remoteRef = 35CCFBAD213C0D3900B3DF59 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
