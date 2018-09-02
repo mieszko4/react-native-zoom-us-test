@@ -7,23 +7,88 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Button} from 'react-native';
+import ZoomUs from 'react-native-zoom-us';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+const zoomUserType = 2; // 2 - pro user
+const config = {
+  zoom: {
+    appKey: "", // TODO: appKey
+    appSecret: "", // TODO appSecret
+    domain: "zoom.us"
+  }
+};
 
 type Props = {};
 export default class App extends Component<Props> {
+  zakTokenRaw = ''; // TODO: meeting zak
+  meetingNo = ''; // TODO: meeting number
+
+  async componentDidMount() {
+    try {
+      const initializeResult = await ZoomUs.initialize(
+        config.zoom.appKey,
+        config.zoom.appSecret,
+        config.zoom.domain
+      );
+      console.warn({ initializeResult });
+    } catch(e) {
+      console.warn({ e });
+    }
+  }
+
+  async start() {
+    const zakToken = decodeURIComponent(this.zakTokenRaw);
+    const displayName = 'Test mentor';
+
+    // TODO recieve user's details from zoom API? WOUT: webinar user is different
+    const userId = 'null'; // NOTE: no need for userId when using zakToken
+    const userType = zoomUserType;
+    const zoomToken = 'null'; // NOTE: no need for userId when using zakToken
+
+    const zoomAccessToken = zakToken;
+
+    try {
+      const startMeetingResult = await ZoomUs.startMeeting(
+        displayName,
+        this.meetingNo,
+        userId,
+        userType,
+        zoomAccessToken,
+        zoomToken
+      );
+      console.warn({ startMeetingResult });
+    } catch(e) {
+      console.warn({ e });
+    }
+  }
+
+  async join() {
+    const displayName = 'Test student';
+
+    try {
+      const joinMeetingResult = await ZoomUs.joinMeeting(
+        displayName,
+        this.meetingNo
+      );
+      console.warn({ joinMeetingResult });
+    } catch(e) {
+      console.warn({ e });
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Button
+          onPress={() => this.start()}
+          title="Start example meeting"
+        />
+        <Text>-------</Text>
+        <Button
+          onPress={() => this.join()}
+          title="Join example meeting"
+        />
       </View>
     );
   }
@@ -35,15 +100,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
