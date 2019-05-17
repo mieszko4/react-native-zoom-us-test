@@ -1,3 +1,5 @@
 rootProject.name = 'ZoomUsTest'
+include ':react-native-zoom-us'
+project(':react-native-zoom-us').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-zoom-us/android')
 
 include ':app'
