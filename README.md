@@ -4,7 +4,7 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 
 ## Usage
 
-* `yarn`
+* `npm i`
 * Open `App.js` and look for `TODO` - edit with your `appKey`, `appSecret`, `zak` from zoom start url, and `meetingNo`.
-* `yarn start`
+* `npm start`
 * `npx react-native run-android` or `npx react-native run-ios`
