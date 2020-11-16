@@ -1,117 +1,102 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
+import React, {useEffect, useState} from 'react';
+import {StyleSheet, View, Button, Text, Alert} from 'react-native';
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import ZoomUs from 'react-native-zoom-us';
 
 declare const global: {HermesInternal: null | {}};
 
+// 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and Create SDK App then fill `sdkKey` and `sdkSecret`
+const skdKey = '';
+const sdkSecret = '';
+
+// 2. `TODO` Fill in the following fields:
+const exampleMeeting = {
+  // for both startMeeting and joinMeeting
+  meetingNumber: '',
+
+  // for startMeeting
+  userId: '',
+  zoomAccessToken: '',
+
+  // for joinMeeting
+  password: '',
+};
+
 const App = () => {
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const initializeResult = await ZoomUs.initialize({
+          clientKey: skdKey,
+          clientSecret: sdkSecret,
+        });
+
+        console.log({initializeResult});
+
+        setIsInitialized(true);
+      } catch (e) {
+        Alert.alert('Error', 'Could not execute initialize');
+        console.error(e);
+      }
+    })();
+  }, []);
+
+  const startMeeting = async () => {
+    try {
+      const startMeetingResult = await ZoomUs.startMeeting({
+        userName: 'John',
+        meetingNumber: exampleMeeting.meetingNumber,
+        userId: exampleMeeting.zoomAccessToken,
+        zoomAccessToken: exampleMeeting.zoomAccessToken,
+      });
+
+      console.log({startMeetingResult});
+    } catch (e) {
+      Alert.alert('Error', 'Could not execute startMeeting');
+      console.error(e);
+    }
+  };
+
+  const joinMeeting = async () => {
+    try {
+      const joinMeetingResult = await ZoomUs.joinMeeting({
+        userName: 'Wick',
+        meetingNumber: exampleMeeting.meetingNumber,
+        password: exampleMeeting.password,
+      });
+
+      console.log({joinMeetingResult});
+    } catch (e) {
+      Alert.alert('Error', 'Could not execute startMeeting');
+      console.error(e);
+    }
+  };
+
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <View style={styles.container}>
+      <Button
+        onPress={() => startMeeting()}
+        title="Start example meeting"
+        disabled={!isInitialized}
+      />
+      <Text>-------</Text>
+      <Button
+        onPress={() => joinMeeting()}
+        title="Join example meeting"
+        disabled={!isInitialized}
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
 });
 
