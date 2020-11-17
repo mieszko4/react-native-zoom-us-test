@@ -10,4 +10,4 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
   * For `startMeeting` provide: `meetingNumber`, `userId`, and `zoomAccessToken`.
   * For `joinMeeting` provide: `meetingNumber` and `password`
 * `yarn start`
-* `npx react-native run-android` or `npx react-native run-ios`
+* `yarn start android` or `yarn start ios`
