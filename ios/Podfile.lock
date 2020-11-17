@@ -296,9 +296,13 @@ PODS:
     - React-Core (= 0.63.3)
     - React-cxxreact (= 0.63.3)
     - React-jsi (= 0.63.3)
+  - RNZoomUs (5.3.0):
+    - React
+    - ZoomSDK (= 5.0.24433.0616)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
+  - ZoomSDK (5.0.24433.0616)
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
@@ -347,6 +351,7 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNZoomUs (from `../node_modules/react-native-zoom-us`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -363,6 +368,7 @@ SPEC REPOS:
     - FlipperKit
     - OpenSSL-Universal
     - YogaKit
+    - ZoomSDK
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -415,6 +421,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNZoomUs:
+    :path: "../node_modules/react-native-zoom-us"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -455,8 +463,10 @@ SPEC CHECKSUMS:
   React-RCTText: 65a6de06a7389098ce24340d1d3556015c38f746
   React-RCTVibration: 8e9fb25724a0805107fc1acc9075e26f814df454
   ReactCommon: 4167844018c9ed375cc01a843e9ee564399e53c3
+  RNZoomUs: 21bef8ba0322338c4883a493451e9428d83713da
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
+  ZoomSDK: 5bfb1ad56cb5514010b818d8bd340b44f1e0338c
 
 PODFILE CHECKSUM: aeb9577cf651f4f581ecc3e361cc2f38769e7de2
 
