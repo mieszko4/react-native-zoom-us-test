@@ -69,7 +69,7 @@ const App = () => {
 
       console.log({joinMeetingResult});
     } catch (e) {
-      Alert.alert('Error', 'Could not execute startMeeting');
+      Alert.alert('Error', 'Could not execute joinMeeting');
       console.error(e);
     }
   };
