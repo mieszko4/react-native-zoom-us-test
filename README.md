@@ -33,5 +33,5 @@ The following procedure covers testing of the bridge.
 #### Real Device
 Note: You will need to allow to install app; look for: Settings -> General -> Device Management -> Apple Development
 
-1. [ ] Development: x-code: Run
-2. [ ] Release: change: `ios/ZoomUsTest.xcodeproj/xcshareddata/xcschemes/ZoomUsTest.xcscheme -> <LaunchAction> -> buildConfiguration = "Release"`, x-code: Run
+1. [ ] Development: Xcode: Run
+2. [ ] Release: change: `ios/ZoomUsTest.xcodeproj/xcshareddata/xcschemes/ZoomUsTest.xcscheme -> <LaunchAction> -> buildConfiguration = "Release"`, Xcode: Run
