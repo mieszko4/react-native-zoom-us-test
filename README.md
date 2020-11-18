@@ -35,3 +35,4 @@ Note: You will need to allow to install app; look for: Settings -> General -> De
 
 1. [ ] Development: Xcode: Run
 2. [ ] Release: change: `ios/ZoomUsTest.xcodeproj/xcshareddata/xcschemes/ZoomUsTest.xcscheme -> <LaunchAction> -> buildConfiguration = "Release"`, Xcode: Run
+3. [ ] Archive: Xcode: Archive
