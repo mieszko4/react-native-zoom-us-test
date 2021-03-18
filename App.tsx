@@ -1,5 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, View, Button, Text, Alert} from 'react-native';
+import {
+  NativeModules,
+  NativeEventEmitter,
+  StyleSheet,
+  View,
+  Button,
+  Text,
+  Alert,
+} from 'react-native';
 
 import ZoomUs from 'react-native-zoom-us';
 
@@ -42,6 +50,21 @@ const App = () => {
       }
     })();
   }, []);
+
+  useEffect(() => {
+    if (!isInitialized) {
+      return;
+    }
+
+    const eventEmitter = new NativeEventEmitter(NativeModules.RNZoomUs);
+    const eventListener = eventEmitter.addListener('MeetingEvent', (e) => {
+      console.log(e.event); //e.g.  "endedByHost" (see more: https://github.com/mieszko4/react-native-zoom-us/blob/ded76d63c3cd42fd75dc72d2f31b09bae953375d/android/src/main/java/ch/milosz/reactnative/RNZoomUsModule.java#L397-L450)
+    });
+
+    return () => {
+      eventListener.remove();
+    };
+  }, [isInitialized]);
 
   const startMeeting = async () => {
     try {
