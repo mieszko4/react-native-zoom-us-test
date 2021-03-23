@@ -5269,13 +5269,6 @@ react-native-codegen@^0.0.6:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
-react-native-zoom-us@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/react-native-zoom-us/-/react-native-zoom-us-5.7.0.tgz#4d5e92f029f29b4fd79a404bc5f80505abe3011d"
-  integrity sha512-8ARkz2SndEuOzYwGNLBBNw60n6qNuxFsWypdBDuWW3rxltoUMqWNta5SSeAEh6vQP98e22YYEuLdgaKKlirSZA==
-  dependencies:
-    invariant "^2.2.4"
-
 react-native@0.64.0:
   version "0.64.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.64.0.tgz#c3bde5b638bf8bcf12bae6e094930d39cb942ab7"
