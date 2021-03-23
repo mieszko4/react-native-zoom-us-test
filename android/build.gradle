@@ -21,6 +21,9 @@ buildscript {
 
 allprojects {
     repositories {
+        flatDir {
+            dirs "$rootDir/../node_modules/react-native-zoom-us/android/libs"
+        }
         mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
