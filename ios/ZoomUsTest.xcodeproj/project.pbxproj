@@ -145,7 +145,6 @@
 				CF940BDA361DA05F5EAA7738 /* Pods-ZoomUsTest-ZoomUsTestTests.debug.xcconfig */,
 				29729A688A69639AF0FB2063 /* Pods-ZoomUsTest-ZoomUsTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -511,6 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ZoomUsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
