@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import ZoomUs, {ZoomEmitter} from 'react-native-zoom-us';
+import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -17,19 +18,16 @@ declare const global: {HermesInternal: null | {}};
 const skdKey = '';
 const sdkSecret = '';
 
-// 2. `TODO` Fill in the following fields:
-const exampleMeeting = {
-  // for both startMeeting and joinMeeting
+// 2a. `TODO` Fill in start meeting data:
+const exampleStartMeeting = {
   meetingNumber: '',
-
-  // for startMeeting
-  userId: '',
   // More info (https://devforum.zoom.us/t/non-login-user-host-meeting-userid-accesstoken-zoomaccesstoken-zak/18720/3)
   zoomAccessToken: '', // `TODO`: Use API at https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usertoken to get `zak` token
-
-  // for joinMeeting
-  password: '',
 };
+
+// 2b. `TODO` Fill in invite link:
+const exampleJoinLink = 'https://us02web.zoom.us/j/MEETING_NUMBER?pwd=PASSWORD';
+const exampleJoinMeeting = extractDataFromJoinLink(exampleJoinLink);
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -75,9 +73,9 @@ const App = () => {
     try {
       const startMeetingResult = await ZoomUs.startMeeting({
         userName: 'John',
-        meetingNumber: exampleMeeting.meetingNumber,
-        userId: exampleMeeting.zoomAccessToken,
-        zoomAccessToken: exampleMeeting.zoomAccessToken,
+        meetingNumber: exampleStartMeeting.meetingNumber,
+        userId: exampleStartMeeting.zoomAccessToken,
+        zoomAccessToken: exampleStartMeeting.zoomAccessToken,
       });
 
       console.log({startMeetingResult});
@@ -91,8 +89,8 @@ const App = () => {
     try {
       const joinMeetingResult = await ZoomUs.joinMeeting({
         userName: 'Wick',
-        meetingNumber: exampleMeeting.meetingNumber,
-        password: exampleMeeting.password,
+        meetingNumber: exampleJoinMeeting.meetingNumber || '',
+        password: exampleJoinMeeting.password || '',
       });
 
       console.log({joinMeetingResult});
