@@ -5,6 +5,7 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 ## Usage
 
 * `yarn`
+* `nvm use`
 * on ios only: `cd ios/ && pod install && cd ..`
 * Go to https://marketplace.zoom.us/develop/create and Create SDK App, then copy `sdkKey` and `sdkSecret`
 * Open `App.tsx` and look for `TODO` - update it with your `sdkKey`, `sdkSecret`.
