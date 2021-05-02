@@ -1,5 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, View, Button, Text, Alert} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Button,
+  Text,
+  Alert,
+  useColorScheme,
+} from 'react-native';
 
 import ZoomUs from 'react-native-zoom-us';
 
@@ -24,7 +31,10 @@ const exampleMeeting = {
 };
 
 const App = () => {
+  const isDarkMode = useColorScheme() === 'dark';
   const [isInitialized, setIsInitialized] = useState(false);
+
+  console.log({isDarkMode});
 
   useEffect(() => {
     (async () => {
