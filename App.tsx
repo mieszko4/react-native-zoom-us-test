@@ -16,8 +16,9 @@ const exampleMeeting = {
 
   // for startMeeting
   userId: '',
-  zoomAccessToken: '',
-
+  // More info (https://devforum.zoom.us/t/non-login-user-host-meeting-userid-accesstoken-zoomaccesstoken-zak/18720/3)
+  zoomAccessToken: '', // `TODO`: Use API at https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usertoken to get `zak` token 
+  
   // for joinMeeting
   password: '',
 };
