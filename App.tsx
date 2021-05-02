@@ -6,9 +6,10 @@ import {
   Text,
   Alert,
   useColorScheme,
+  NativeEventEmitter,
 } from 'react-native';
 
-import ZoomUs from 'react-native-zoom-us';
+import ZoomUs, {ZoomEmitter} from 'react-native-zoom-us';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -24,8 +25,8 @@ const exampleMeeting = {
   // for startMeeting
   userId: '',
   // More info (https://devforum.zoom.us/t/non-login-user-host-meeting-userid-accesstoken-zoomaccesstoken-zak/18720/3)
-  zoomAccessToken: '', // `TODO`: Use API at https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usertoken to get `zak` token 
-  
+  zoomAccessToken: '', // `TODO`: Use API at https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usertoken to get `zak` token
+
   // for joinMeeting
   password: '',
 };
@@ -53,6 +54,22 @@ const App = () => {
       }
     })();
   }, []);
+
+  useEffect(() => {
+    if (!isInitialized) {
+      return;
+    }
+
+    // For more see https://github.com/mieszko4/react-native-zoom-us/blob/master/docs/EVENTS.md
+    const zoomEmitter = new NativeEventEmitter(ZoomEmitter);
+    const eventListener = zoomEmitter.addListener('MeetingEvent', e => {
+      console.log(e.event); //e.g.  "endedByHost" (see more: https://github.com/mieszko4/react-native-zoom-us/blob/ded76d63c3cd42fd75dc72d2f31b09bae953375d/android/src/main/java/ch/milosz/reactnative/RNZoomUsModule.java#L397-L450)
+    });
+
+    return () => {
+      eventListener.remove();
+    };
+  }, [isInitialized]);
 
   const startMeeting = async () => {
     try {
