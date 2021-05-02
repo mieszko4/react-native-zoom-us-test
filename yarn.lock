@@ -5269,10 +5269,10 @@ react-native-codegen@^0.0.6:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
-react-native-zoom-us@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/react-native-zoom-us/-/react-native-zoom-us-5.7.0.tgz#4d5e92f029f29b4fd79a404bc5f80505abe3011d"
-  integrity sha512-8ARkz2SndEuOzYwGNLBBNw60n6qNuxFsWypdBDuWW3rxltoUMqWNta5SSeAEh6vQP98e22YYEuLdgaKKlirSZA==
+react-native-zoom-us@^5.8.1:
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/react-native-zoom-us/-/react-native-zoom-us-5.8.1.tgz#c3be4d326f487318b9102d5898bafccf90ae47af"
+  integrity sha512-6efwsdNGGSn+ojuElKCynDwGBwOxlc2t2OXQMXPcqtoUv9ms4Dwm4/1ANToJtRrlv4lMYJSLtyN/pWHXxr/b8w==
   dependencies:
     invariant "^2.2.4"
 
