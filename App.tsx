@@ -64,9 +64,7 @@ const App = () => {
       console.log(e.event); //e.g.  "endedByHost" (see more: https://github.com/mieszko4/react-native-zoom-us/blob/ded76d63c3cd42fd75dc72d2f31b09bae953375d/android/src/main/java/ch/milosz/reactnative/RNZoomUsModule.java#L397-L450)
     });
 
-    return () => {
-      eventListener.remove();
-    };
+    return () => eventListener.remove();
   }, [isInitialized]);
 
   const startMeeting = async () => {
