@@ -14,11 +14,10 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 * `yarn start`
 * `yarn run android` or `yarn run ios`
 
-## Development (android only)
+## Development
 
-* clone and set up `react-native-zoom-us` in a local folder (outside of `react-native-zoom-us-test`)
-* in `react-native-zoom-us` folder run: `yarn link`
-* in `react-native-zoom-us-test` folder run: `yarn start haul`
+* clone and set up `react-native-zoom-us` outside of `react-native-zoom-us-test`
+* in `react-native-zoom-us-test` folder run: `TODO`
 
 ## Smoke Test Procedure
 The following procedure covers testing of the bridge.

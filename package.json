@@ -17,9 +17,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
-    "@haul-bundler/babel-preset-react-native": "^0.16.0",
-    "@haul-bundler/cli": "^0.23.0",
-    "@haul-bundler/preset-0.60": "^0.18.1",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.20",
     "@types/react-native": "^0.64.0",
