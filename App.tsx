@@ -12,11 +12,22 @@ import {
 import ZoomUs, {ZoomEmitter} from 'react-native-zoom-us';
 import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
+import sdkJwtToken from './sdk.jwt.json';
+
 declare const global: {HermesInternal: null | {}};
 
 // 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and Create SDK App then fill `sdkKey` and `sdkSecret`
+// There are TWO options to initialize zoom sdk: without jwt token OR with jwt token
+
+// 1a. without jwt token (quick start while developing)
 const skdKey = '';
 const sdkSecret = '';
+
+// 1b. with jwt token (should be used in production)
+// - Replace you sdkKey and sdkSecret and run the following in the terminal:
+// SDK_KEY=skdKey SDK_SECRET=sdkSecret yarn run sdk:get-jwt
+// This will fill up ./sdk.jwt.json that will be used instead of sdkKey and sdkSecret
+const jwtToken = sdkJwtToken.jwtToken;
 
 // 2a. `TODO` Fill in start meeting data:
 const exampleStartMeeting = {
@@ -27,6 +38,7 @@ const exampleStartMeeting = {
 
 // 2b. `TODO` Fill in invite link:
 const exampleJoinLink = 'https://us02web.zoom.us/j/MEETING_NUMBER?pwd=PASSWORD';
+
 const exampleJoinMeeting = extractDataFromJoinLink(exampleJoinLink);
 
 const App = () => {
@@ -38,10 +50,9 @@ const App = () => {
   useEffect(() => {
     (async () => {
       try {
-        const initializeResult = await ZoomUs.initialize({
-          clientKey: skdKey,
-          clientSecret: sdkSecret,
-        });
+        const initializeResult = await ZoomUs.initialize(
+          jwtToken ? {jwtToken} : {clientKey: skdKey, clientSecret: sdkSecret},
+        );
 
         console.log({initializeResult});
 

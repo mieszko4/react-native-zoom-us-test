@@ -22,7 +22,7 @@ Currently because of react-native symlink limitation the following must be done 
 * clone and set up `react-native-zoom-us`
 * `npm run prepack`
 * `cd react-native-zoom-us-test && rm -fr node_modules/react-native-zoom-us/ && cp -R ../react-native-zoom-us node_modules/`
-* repeat on each change
+* repeat on each lib change
 
 ## Smoke Test Procedure
 The following procedure covers testing of the bridge.
