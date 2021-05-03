@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "sdk:get-jwt": "npx ts-node api/getJwtTokenForInitializeZoom.ts > ./api/sdk.jwt.json"
+    "sdk:get-jwt": "npx ts-node api/getSdkJwtToken.ts > ./api/sdk.jwt.json"
   },
   "dependencies": {
     "react": "17.0.1",
