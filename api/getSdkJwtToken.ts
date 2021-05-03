@@ -1,13 +1,5 @@
 import jwt from 'jsonwebtoken';
 
-// NOTE1: zoom has two different types of JWT token
-// 1. jwt token used to initialize zoom sdk (it is implemented HERE)
-// 2. jwt token used to authenticate with Zoom API
-
-// NOTE2: this should be implemented on your backend API
-// and your app should request for a token to initialize zoom sdk
-// do not hardcode and do not send (sdkKey, sdkSecret)
-
 const getSdkJwtToken = (
   sdkKey: string,
   sdkSecret: string,
