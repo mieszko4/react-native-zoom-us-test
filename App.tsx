@@ -12,7 +12,7 @@ import {
 import ZoomUs, {ZoomEmitter} from 'react-native-zoom-us';
 import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
-import sdkJwtToken from './sdk.jwt.json';
+import sdkJwtToken from './api/sdk.jwt.json';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -26,7 +26,7 @@ const sdkSecret = '';
 // 1b. with jwt token (should be used in production)
 // - Replace you sdkKey and sdkSecret and run the following in the terminal:
 // SDK_KEY=skdKey SDK_SECRET=sdkSecret yarn run sdk:get-jwt
-// This will fill up ./sdk.jwt.json that will be used instead of sdkKey and sdkSecret
+// This will fill up ./api/sdk.jwt.json that will be used instead of sdkKey and sdkSecret
 const jwtToken = sdkJwtToken.jwtToken;
 
 // 2a. `TODO` Fill in start meeting data:
