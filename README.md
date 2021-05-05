@@ -21,7 +21,8 @@ Currently because of react-native symlink limitation the following must be done 
 * `cd ..`
 * clone and set up `react-native-zoom-us`
 * `npm run prepack`
-* `cd react-native-zoom-us-test && rm -fr node_modules/react-native-zoom-us/ && cp -R ../react-native-zoom-us node_modules/`
+* `cd react-native-zoom-us-test`
+* `rm -fr node_modules/react-native-zoom-us/ && cp -R ../react-native-zoom-us node_modules/`
 * repeat on each lib change
 
 ## Smoke Test Procedure
