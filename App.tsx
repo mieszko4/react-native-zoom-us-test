@@ -20,12 +20,12 @@ declare const global: {HermesInternal: null | {}};
 // There are TWO options to initialize zoom sdk: without jwt token OR with jwt token
 
 // 1a. without jwt token (quick start while developing)
-const skdKey = '';
+const sdkKey = '';
 const sdkSecret = '';
 
 // 1b. with jwt token (should be used in production)
 // - Replace you sdkKey and sdkSecret and run the following in the terminal:
-// SDK_KEY=skdKey SDK_SECRET=sdkSecret yarn run sdk:get-jwt
+// SDK_KEY=sdkKey SDK_SECRET=sdkSecret yarn run sdk:get-jwt
 // This will fill up ./api/sdk.jwt.json that will be used instead of sdkKey and sdkSecret
 const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 
@@ -53,7 +53,7 @@ const App = () => {
         const initializeResult = await ZoomUs.initialize(
           sdkJwtToken
             ? {jwtToken: sdkJwtToken}
-            : {clientKey: skdKey, clientSecret: sdkSecret},
+            : {clientKey: sdkKey, clientSecret: sdkSecret},
         );
 
         console.log({initializeResult});

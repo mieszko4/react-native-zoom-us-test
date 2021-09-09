@@ -26,7 +26,7 @@ Currently because of react-native symlink limitation the following must be done 
 * repeat on each lib change
 
 ## Smoke Test Procedure
-The following procedure covers testing of the bridge.
+The following procedure covers testing of the bridge (initialization and join meeting only).
 
 ### Android
 
@@ -45,6 +45,6 @@ The following procedure covers testing of the bridge.
 #### Real Device
 Note: You will need to allow to install app; look for: Settings -> General -> Device Management -> Apple Development
 
-1. [ ] Development: Xcode: Run
-2. [ ] Release: change: `ios/ZoomUsTest.xcodeproj/xcshareddata/xcschemes/ZoomUsTest.xcscheme -> <LaunchAction> -> buildConfiguration = "Release"`, Xcode: Run
-3. [ ] Archive: Xcode: Archive
+1. [ ] Development: Xcode: Product -> Run
+2. [ ] Release: Xcode: Product -> Profile
+3. [ ] Archive: Xcode: Product -> Archive
