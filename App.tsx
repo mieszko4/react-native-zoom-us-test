@@ -54,6 +54,9 @@ const App = () => {
           sdkJwtToken
             ? {jwtToken: sdkJwtToken}
             : {clientKey: sdkKey, clientSecret: sdkSecret},
+          {
+            language: 'pt-PT',
+          },
         );
 
         console.log({initializeResult});
