@@ -9,7 +9,7 @@ import {
   NativeEventEmitter,
 } from 'react-native';
 
-import ZoomUs, {ZoomEmitter} from 'react-native-zoom-us';
+import ZoomUs, {ZoomEmitter, ZoomUsVideoView} from 'react-native-zoom-us';
 import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
 import sdkJwtTokenJson from './api/sdk.jwt.json';
@@ -41,6 +41,68 @@ const exampleJoinLink = 'https://us02web.zoom.us/j/MEETING_NUMBER?pwd=PASSWORD';
 
 const exampleJoinMeeting = extractDataFromJoinLink(exampleJoinLink);
 
+const CustomViewer = () => {
+  return (
+    <>
+      <ZoomUsVideoView
+        //style={StyleSheet.absoluteFillObject}
+        layout={[
+          // The active speaker
+          {
+            kind: 'active',
+            x: 0,
+            y: 0,
+            width: 1,
+            height: 1,
+          },
+          // Selfcamera preview
+          {
+            kind: 'preview',
+            // The percent of video view (required)
+            x: 0.73,
+            y: 0.73,
+            width: 0.25,
+            height: 0.2,
+            // Enable border (optional)
+            border: true,
+            // Disable show user name (optional)
+            showUsername: false,
+            // Show audio off (optional)
+            showAudioOff: true,
+            // Background color (optional)
+            background: '#ccc',
+          },
+          // active speaker's share
+          /*
+          {
+            kind: 'active-share',
+          },
+          // share video
+          {
+            kind: 'share',
+            // The index of user list (required)
+            userIndex: 0,
+          },
+          // Specify attendee
+          {
+            kind: 'attendee',
+            // The index of user list (required)
+            userIndex: 0,
+          },
+          {
+            kind: 'attendee',
+            userIndex: 1,
+          },
+          */
+        ]}
+      />
+    </>
+  );
+};
+
+// 3. `TODO` Enable custom view
+const enableCustomizedMeetingUI = false;
+
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const [isInitialized, setIsInitialized] = useState(false);
@@ -56,6 +118,7 @@ const App = () => {
             : {clientKey: sdkKey, clientSecret: sdkSecret},
           {
             language: 'pt-PT',
+            enableCustomizedMeetingUI,
           },
         );
 
@@ -131,6 +194,7 @@ const App = () => {
         title="Join example meeting"
         disabled={!isInitialized}
       />
+      {enableCustomizedMeetingUI && <CustomViewer />}
     </View>
   );
 };
