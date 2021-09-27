@@ -41,11 +41,16 @@ const exampleJoinLink = 'https://us02web.zoom.us/j/MEETING_NUMBER?pwd=PASSWORD';
 
 const exampleJoinMeeting = extractDataFromJoinLink(exampleJoinLink);
 
-const CustomViewer = () => {
+type CustomViewerProps = {
+  leaveMeeting: () => void;
+};
+
+const CustomViewer = ({leaveMeeting}: CustomViewerProps) => {
   return (
-    <>
+    <View style={StyleSheet.absoluteFillObject}>
+      <Button onPress={leaveMeeting} title="Leave meeting" />
       <ZoomUsVideoView
-        style={StyleSheet.absoluteFillObject}
+        style={styles.customViewer}
         layout={[
           // The active speaker
           {
@@ -96,7 +101,7 @@ const CustomViewer = () => {
           */
         ]}
       />
-    </>
+    </View>
   );
 };
 
@@ -191,6 +196,17 @@ const App = () => {
     }
   };
 
+  const leaveMeeting = async () => {
+    try {
+      const leaveMeetingResult = await ZoomUs.leaveMeeting();
+
+      console.log({leaveMeetingResult});
+    } catch (e) {
+      Alert.alert('Error', 'Could not execute leaveMeeting');
+      console.error(e);
+    }
+  };
+
   return (
     <>
       <View style={styles.container}>
@@ -206,7 +222,9 @@ const App = () => {
           disabled={!isInitialized}
         />
       </View>
-      {enableCustomizedMeetingUI && isMeetingOngoing && <CustomViewer />}
+      {enableCustomizedMeetingUI && isMeetingOngoing && (
+        <CustomViewer leaveMeeting={leaveMeeting} />
+      )}
     </>
   );
 };
@@ -217,6 +235,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  customViewer: {
+    width: '100%',
+    flex: 1,
+    backgroundColor: 'red',
   },
 });
 
