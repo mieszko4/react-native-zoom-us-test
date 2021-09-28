@@ -13,7 +13,7 @@ import ZoomUs, {ZoomEmitter, ZoomUsVideoView} from 'react-native-zoom-us';
 import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
 import sdkJwtTokenJson from './api/sdk.jwt.json';
-import zakJson from './api/api.zak.json';
+import startPersonalMeetingJson from './api/api.startPersonalMeeting.json';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -38,11 +38,11 @@ const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 // API_KEY=apiKey API_SECRET=apiSecret yarn run api:get-jwt
 // This will create JWT token in `./api/api.jwt.json` that you can use for the step of getting your personal meeting data.
 // - Run the following in the terminal:
-// yarn run api:get-zak
+// yarn run api:get-startPersonalMeeting
 const exampleStartMeeting = {
-  userId: zakJson.userId,
-  meetingNumber: zakJson.meetingNumber,
-  zoomAccessToken: zakJson.zoomAccessToken,
+  userId: startPersonalMeetingJson.userId,
+  meetingNumber: startPersonalMeetingJson.meetingNumber,
+  zoomAccessToken: startPersonalMeetingJson.zoomAccessToken,
 };
 
 // 2b. `TODO` Fill in invite link:
