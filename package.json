@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "api:get-jwt": "npx ts-node api/getApiJwtToken.ts > ./api/api.jwt.json",
-    "api:get-startPersonalMeeting": "npx ts-node api/startPersonalMeeting.ts > ./api/api.startPersonalMeeting.json",
+    "api:get-startPersonalMeeting": "npx ts-node api/startPersonalMeeting.ts > ./api/api.startMeeting.json",
     "sdk:get-jwt": "npx ts-node api/getSdkJwtToken.ts > ./api/sdk.jwt.json"
   },
   "dependencies": {

@@ -13,7 +13,7 @@ import ZoomUs, {ZoomEmitter, ZoomUsVideoView} from 'react-native-zoom-us';
 import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
 import sdkJwtTokenJson from './api/sdk.jwt.json';
-import startPersonalMeetingJson from './api/api.startPersonalMeeting.json';
+import startMeetingJson from './api/api.startMeeting.json';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -40,9 +40,9 @@ const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 // - Run the following in the terminal:
 // yarn run api:get-startPersonalMeeting
 const exampleStartMeeting = {
-  userId: startPersonalMeetingJson.userId,
-  meetingNumber: startPersonalMeetingJson.meetingNumber,
-  zoomAccessToken: startPersonalMeetingJson.zoomAccessToken,
+  userId: startMeetingJson.userId,
+  meetingNumber: startMeetingJson.meetingNumber,
+  zoomAccessToken: startMeetingJson.zoomAccessToken,
 };
 
 // 2b. `TODO` Fill in invite link:
