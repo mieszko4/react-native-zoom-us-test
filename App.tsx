@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 
 import ZoomUs, {ZoomEmitter, ZoomUsVideoView} from 'react-native-zoom-us';
+import {NativeLayoutUnit} from 'react-native-zoom-us/native';
+
 import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
 import sdkJwtTokenJson from './api/sdk.jwt.json';
@@ -55,21 +57,37 @@ type CustomViewerProps = {
 };
 
 const CustomViewer = ({leaveMeeting}: CustomViewerProps) => {
+  const [showScreenShare, setShowScreenShare] = useState(false);
+
+  const activeConfig: NativeLayoutUnit = {
+    kind: 'active',
+    x: 0,
+    y: 0,
+    width: 1,
+    height: 1,
+  };
+
+  const activeShareConfig: NativeLayoutUnit = {
+    kind: 'active-share',
+    x: 0,
+    y: 0,
+    width: 1,
+    height: 1,
+  };
+
   return (
     <View style={StyleSheet.absoluteFillObject}>
       <Button onPress={leaveMeeting} title="Leave meeting" />
       <Button onPress={() => ZoomUs.startShareScreen()} title="Share screen" />
+      <Button
+        onPress={() => setShowScreenShare(!showScreenShare)}
+        title={!showScreenShare ? 'Show screen' : 'Show video'}
+      />
       <ZoomUsVideoView
         style={styles.customViewer}
         layout={[
-          // The active speaker
-          {
-            kind: 'active',
-            x: 0,
-            y: 0,
-            width: 1,
-            height: 1,
-          },
+          // TODO: check why showing both at the same time does not work
+          showScreenShare ? activeShareConfig : activeConfig,
           // Selfcamera preview
           {
             kind: 'preview',
@@ -87,11 +105,7 @@ const CustomViewer = ({leaveMeeting}: CustomViewerProps) => {
             // Background color (optional)
             background: '#ccc',
           },
-          // active speaker's share
           /*
-          {
-            kind: 'active-share',
-          },
           // share video
           {
             kind: 'share',
