@@ -58,6 +58,7 @@ const CustomViewer = ({leaveMeeting}: CustomViewerProps) => {
   return (
     <View style={StyleSheet.absoluteFillObject}>
       <Button onPress={leaveMeeting} title="Leave meeting" />
+      <Button onPress={() => ZoomUs.startShareScreen()} title="Share screen" />
       <ZoomUsVideoView
         style={styles.customViewer}
         layout={[
@@ -114,7 +115,7 @@ const CustomViewer = ({leaveMeeting}: CustomViewerProps) => {
   );
 };
 
-// 3. `TODO` Enable custom view
+// 3. `TODO` Enable custom view (android only)
 const enableCustomizedMeetingUI = false;
 
 const App = () => {
