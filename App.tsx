@@ -7,6 +7,7 @@ import {
   Alert,
   useColorScheme,
   NativeEventEmitter,
+  Platform,
 } from 'react-native';
 
 import ZoomUs, {ZoomEmitter, ZoomUsVideoView} from 'react-native-zoom-us';
@@ -171,8 +172,8 @@ const App = () => {
     const zoomEmitter = new NativeEventEmitter(ZoomEmitter);
     const eventListener = zoomEmitter.addListener(
       'MeetingEvent',
-      ({event, status}) => {
-        console.log({event, status}); //e.g.  "endedByHost" (see more: https://github.com/mieszko4/react-native-zoom-us/blob/ded76d63c3cd42fd75dc72d2f31b09bae953375d/android/src/main/java/ch/milosz/reactnative/RNZoomUsModule.java#L397-L450)
+      ({event, status, ...params}) => {
+        console.log({event, status, params}); //e.g.  "endedByHost" (see more: https://github.com/mieszko4/react-native-zoom-us/blob/master/docs/EVENTS.md)
 
         if (status === 'MEETING_STATUS_CONNECTING') {
           setIsMeetingOngoing(true);
@@ -208,7 +209,7 @@ const App = () => {
     try {
       const joinMeetingResult = await ZoomUs.joinMeeting({
         autoConnectAudio: true,
-        userName: 'Wick',
+        userName: `Wick ${Platform.OS}`,
         meetingNumber: exampleJoinMeeting.meetingNumber || '',
         password: exampleJoinMeeting.password || '',
       });
