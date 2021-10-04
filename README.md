@@ -25,6 +25,11 @@ Currently because of react-native symlink limitation the following must be done 
 * `rm -fr node_modules/react-native-zoom-us/ && cp -R ../react-native-zoom-us node_modules/`
 * repeat on each lib change
 
+## Upgrading react-native
+
+This repository was generated using https://github.com/react-native-community/react-native-template-typescript
+Use diff between two versions of react-native to apply the changes, e.g. (https://github.com/react-native-community/react-native-template-typescript/compare/6.6.4...6.8.0). Use `/template/*` folder only
+
 ## Smoke Test Procedure
 The following procedure covers testing of the bridge (initialization and join meeting only).
 
