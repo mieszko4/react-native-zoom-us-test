@@ -337,7 +337,7 @@ PODS:
     - React-jsi (= 0.66.0)
     - React-logger (= 0.66.0)
     - React-perflogger (= 0.66.0)
-  - RNZoomUs (6.4.0):
+  - RNZoomUs (6.5.1):
     - React
     - ZoomSDK (= 5.7.1.645)
   - Yoga (1.14.0)
@@ -526,7 +526,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 53b92d54b923283638cb0186da7a5c2d2b70a49b
   React-runtimeexecutor: 4bb657a97aa74568d9ed634c8bd478299bb8a3a6
   ReactCommon: eb059748e842a1a86025ebbd4ac9d99e74492f88
-  RNZoomUs: 4e55a32cf8aa6d2bf628b96a61612221e0bf3319
+  RNZoomUs: 59a4753dc6c6717a8a6634cfc19cdd3e376e1d31
   Yoga: c11abbf5809216c91fcd62f5571078b83d9b6720
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   ZoomSDK: b9099f27780e71095cd563d0907eae52d150104f
