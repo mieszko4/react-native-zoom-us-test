@@ -63,3 +63,13 @@
 -dontwarn java.nio.file.*
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 -dontwarn okio.**
+
+
+# react-native-zoom-us
+-keep class  us.zoom.**{*;}
+-keep class  com.zipow.**{*;}
+-keep class  us.zipow.**{*;}
+-keep class  org.webrtc.**{*;}
+-keep class  us.google.protobuf.**{*;}
+-keep class  com.google.crypto.tink.**{*;}
+-keep class  androidx.security.crypto.**{*;}
