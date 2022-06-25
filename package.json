@@ -34,6 +34,7 @@
     "metro-react-native-babel-preset": "^0.66.2",
     "node-fetch": "2",
     "react-test-renderer": "17.0.2",
+    "ts-node": "^10.8.1",
     "typescript": "^3.8.3"
   },
   "resolutions": {
