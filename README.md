@@ -44,8 +44,8 @@ The following procedure covers testing of the bridge (initialization and join me
 
 ### iOS
 
-#### Emulator
-1. [ ] Development: `yarn run ios`
+#### Simulator
+1. [ ] Development: `yarn run ios` (Note that M1 chip is not supported by Zoom SDK)
 
 #### Real Device
 Note: You will need to allow to install app; look for: Settings -> General -> Device Management -> Apple Development
