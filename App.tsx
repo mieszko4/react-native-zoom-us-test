@@ -266,7 +266,6 @@ const styles = StyleSheet.create({
   customViewer: {
     width: '100%',
     flex: 1,
-    backgroundColor: 'red',
   },
 });
 
