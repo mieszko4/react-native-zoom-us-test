@@ -158,7 +158,7 @@ const App = () => {
         setIsInitialized(true);
       } catch (e) {
         Alert.alert('Error', 'Could not execute initialize');
-        console.error(e);
+        console.error('ERR', e);
       }
     })();
   }, []);
@@ -196,12 +196,13 @@ const App = () => {
         meetingNumber: exampleStartMeeting.meetingNumber,
         userId: exampleStartMeeting.userId,
         zoomAccessToken: exampleStartMeeting.zoomAccessToken,
+        noMeetingErrorMessage: true, // Set this to be able to show Alert.alert
       });
 
       console.log({startMeetingResult});
     } catch (e) {
       Alert.alert('Error', 'Could not execute startMeeting');
-      console.error(e);
+      console.error('ERR', e);
     }
   };
 
@@ -212,12 +213,13 @@ const App = () => {
         userName: `Wick ${Platform.OS}`,
         meetingNumber: exampleJoinMeeting.meetingNumber || '',
         password: exampleJoinMeeting.password || '',
+        noMeetingErrorMessage: true, // Set this to be able to show Alert.alert
       });
 
       console.log({joinMeetingResult});
     } catch (e) {
       Alert.alert('Error', 'Could not execute joinMeeting');
-      console.error(e);
+      console.error('ERR', e);
     }
   };
 
@@ -228,7 +230,7 @@ const App = () => {
       console.log({leaveMeetingResult});
     } catch (e) {
       Alert.alert('Error', 'Could not execute leaveMeeting');
-      console.error(e);
+      console.error('ERR', e);
     }
   };
 
@@ -264,7 +266,6 @@ const styles = StyleSheet.create({
   customViewer: {
     width: '100%',
     flex: 1,
-    backgroundColor: 'red',
   },
 });
 
