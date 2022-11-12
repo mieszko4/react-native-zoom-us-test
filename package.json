@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react-native": "0.70.5",
+    "react-native-zoom-us": "^6.15.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
