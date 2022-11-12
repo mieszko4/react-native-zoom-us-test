@@ -9,33 +9,47 @@ const headers = {
   Authorization: `Bearer ${apiJwtTokenJson.jwtToken}`,
 };
 
-const processRequest = async (url: URL) => {
+type Error = {
+  code: string;
+  message: string;
+};
+
+const processRequest = async <Response>(url: URL) => {
   const response = await fetch(url.toString(), {
     headers,
   });
 
-  const json = await response.json();
+  const json = (await response.json()) as Error | Response;
 
-  if (json.code) {
+  if ('code' in json) {
     throw new Error(json.message);
   }
 
   return json;
 };
 
+type UsersResponse = {
+  users: {
+    pmi: string;
+    id: string;
+  }[];
+};
 const getUsers = async () => {
   const url = new URL(`${baseUrl}/users`);
   url.searchParams.append('status', 'active');
 
-  return processRequest(url);
+  return processRequest<UsersResponse>(url);
 };
 
+type UserTokenResponse = {
+  token: string;
+};
 const getUserToken = async (id: string) => {
   const url = new URL(`${baseUrl}/users/${id}/token`);
   url.searchParams.append('type', 'zak');
   url.searchParams.append('ttl', '3600');
 
-  return processRequest(url);
+  return processRequest<UserTokenResponse>(url);
 };
 
 const main = async () => {
