@@ -11,14 +11,12 @@ import {
 } from 'react-native';
 
 import ZoomUs, {ZoomEmitter, ZoomUsVideoView} from 'react-native-zoom-us';
-import {NativeLayoutUnit} from 'react-native-zoom-us/native';
+import {type NativeLayoutUnit} from 'react-native-zoom-us/native';
 
 import {extractDataFromJoinLink} from './extractDataFromJoinLink';
 
-import sdkJwtTokenJson from './api/sdk.jwt.json';
-import startMeetingJson from './api/api.startMeeting.json';
-
-declare const global: {HermesInternal: null | {}};
+import * as sdkJwtTokenJson from './api/sdk.jwt.json';
+import * as startMeetingJson from './api/api.startMeeting.json';
 
 // 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and Create SDK App then fill `sdkKey` and `sdkSecret`
 // There are TWO options to initialize zoom sdk: without jwt token OR with jwt token
