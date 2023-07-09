@@ -73,7 +73,7 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
-  - hermes-engine (0.70.5)
+  - hermes-engine (0.70.12)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.07.22.00):
@@ -371,7 +371,7 @@ PODS:
   - RNZoomUs (6.16.5):
     - React
     - ZoomSDK (= 5.11.3.4099.1)
-  - SocketRocket (0.6.0)
+  - SocketRocket (0.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -547,7 +547,7 @@ SPEC CHECKSUMS:
   FlipperKit: cbdee19bdd4e7f05472a66ce290f1b729ba3cb86
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
-  hermes-engine: 7fe5fc6ef707b7fdcb161b63898ec500e285653d
+  hermes-engine: 9ae9c0a1ad0ca69b7e3abc1533b6beb01a3ba4ef
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda
@@ -578,7 +578,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 6bedb63b3de0c5c3bb3cc44595431e2a91c24da2
   ReactCommon: 2642dd48fe3def7738d85f747c05fdd8c3a47950
   RNZoomUs: 719996cbda0de1f4a79aa2a16f3066c040f25552
-  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: bb774af243598f7f860127c6e9ac7b62fb6519c4
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   ZoomSDK: ec21cf6a159bc0586de3fcad60e1594a25dd5ed8
