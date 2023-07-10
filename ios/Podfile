@@ -4,8 +4,6 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '12.4'
 install! 'cocoapods', :deterministic_uuids => false
 
-pod 'ZoomSDK', :path => '/Users/milosz/zoom-sdk-pods'
-
 target 'ZoomUsTest' do
   config = use_native_modules!
 

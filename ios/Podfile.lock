@@ -438,7 +438,6 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNZoomUs (from `../node_modules/react-native-zoom-us`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
-  - ZoomSDK (from `/Users/milosz/zoom-sdk-pods`)
 
 SPEC REPOS:
   trunk:
@@ -457,6 +456,7 @@ SPEC REPOS:
     - OpenSSL-Universal
     - SocketRocket
     - YogaKit
+    - ZoomSDK
 
 EXTERNAL SOURCES:
   boost:
@@ -529,8 +529,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-zoom-us"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
-  ZoomSDK:
-    :path: "/Users/milosz/zoom-sdk-pods"
 
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
@@ -585,6 +583,6 @@ SPEC CHECKSUMS:
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   ZoomSDK: 66f324627d65d3eb10686448fb78de9220824463
 
-PODFILE CHECKSUM: 9e01b7d5ccab3f8f3b9f7ec3c2606a93a259d679
+PODFILE CHECKSUM: 7523152ba3db33edf1e6a11b7f3a049a9c2e2616
 
 COCOAPODS: 1.11.3
