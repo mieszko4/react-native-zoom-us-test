@@ -49,7 +49,7 @@ The following procedure covers testing of the bridge (initialization and join me
 
 #### Simulator
 
-1. [ ] Development: `yarn ios` (Note that M1 chip is not supported by Zoom SDK)
+1. [ ] Development: `yarn ios`
 
 #### Real Device
 
