@@ -7,9 +7,7 @@
     <application
         android:usesCleartextTraffic="true"
         tools:targetApi="28"
-        tools:remove="android:networkSecurityConfig"
-        tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:usesCleartextTraffic">
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false" />
     </application>
 </manifest>
