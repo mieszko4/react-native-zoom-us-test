@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "typecheck": "tsc",
     "start": "react-native start",
     "test": "jest",
     "api:get-jwt": "npx ts-node api/getApiJwtToken.ts > ./api/api.jwt.json",
