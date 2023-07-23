@@ -16,6 +16,7 @@
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.72.2",
+    "react-native-url-polyfill": "2.0.0",
     "react-native-zoom-us": "6.17.0"
   },
   "devDependencies": {
