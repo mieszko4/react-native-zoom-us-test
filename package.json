@@ -1,13 +1,16 @@
 {
   "name": "ZoomUsTest",
-  "version": "0.0.1",
+  "version": "7.1.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "api:get-jwt": "npx ts-node api/getApiJwtToken.ts > ./api/api.jwt.json",
+    "api:get-startPersonalMeeting": "npx ts-node api/startPersonalMeeting.ts > ./api/api.startMeeting.json",
+    "sdk:get-jwt": "npx ts-node api/getSdkJwtToken.ts > ./api/sdk.jwt.json"
   },
   "dependencies": {
     "react": "18.2.0",

@@ -66,7 +66,6 @@ const main = async () => {
   }
 
   const data = {
-    userId: firstUser.id,
     meetingNumber: firstUser.pmi.toString(),
     zoomAccessToken: userTokenResponse.token,
   };

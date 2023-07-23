@@ -1,79 +1,61 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# zoom-us-test
 
-# Getting Started
+Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/package/react-native-zoom-us).
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Getting Started
 
-## Step 1: Start the Metro Server
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- `yarn`
+- on iOS only (requires at least Ruby@3.2.2):
+  - `bundle install`
+  - `cd ios/ && bundle exec pod install && cd ..`
+- Go to https://marketplace.zoom.us/develop/create and Create SDK App, then copy `sdkKey` and `sdkSecret`
+- Open `App.tsx` and look for `TODO` - update it with your `sdkKey`, `sdkSecret`.
+  - For `startMeeting` provide: `meetingNumber` and `zoomAccessToken`.
+  - For `joinMeeting` provide: `meetingNumber` and `password`
+- `yarn start`
+- `yarn android` or `yarn ios`
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Developing with the lib
 
-```bash
-# using npm
-npm start
+Currently because of react-native symlink limitation the following must be done manually:
 
-# OR using Yarn
-yarn start
-```
+- open new terminal and make sure you are in the parent's folder (`cd ..`)
+- clone and set up `react-native-zoom-us`
+- pack `react-native-zoom-us` and copy it to `react-native-zoom-us-test` using `npm run dev`
+- repeat on each lib change
 
-## Step 2: Start your Application
+## Upgrading react-native
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+This repository was generated using `npx react-native@0.72.2 init ZoomUsTest --version 0.72.2`.
+Use diff between two versions of react-native to apply the changes using https://react-native-community.github.io/upgrade-helper/.
 
-### For Android
+## Smoke Test Procedure
 
-```bash
-# using npm
-npm run android
+The following procedure covers testing of the bridge (initialization and join meeting only).
 
-# OR using Yarn
-yarn android
-```
+### Android
 
-### For iOS
+#### Emulator
 
-```bash
-# using npm
-npm run ios
+1. [ ] Development: `yarn android`
 
-# OR using Yarn
-yarn ios
-```
+#### Real Device
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+1. [ ] Development: `yarn android`
+2. [ ] Release: `yarn android --variant=release`
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### iOS
 
-## Step 3: Modifying your App
+#### Simulator
 
-Now that you have successfully run the app, let's modify it.
+1. [ ] Development: `yarn ios`
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+#### Real Device
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+Note: You will need to allow to install app; look for: Settings -> General -> Device Management -> Apple Development
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+1. [ ] Development: Xcode: Product -> Run
+2. [ ] Release: Xcode: Product -> Profile
+3. [ ] Archive: Xcode: Product -> Archive
