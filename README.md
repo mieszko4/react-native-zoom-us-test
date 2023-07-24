@@ -14,6 +14,7 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 - Open `App.tsx` and look for `TODO` - update it with your `sdkKey`, `sdkSecret`.
   - For `startMeeting` provide: `meetingNumber` and `zoomAccessToken`.
   - For `joinMeeting` provide: `meetingNumber` and `password`
+- Change `DEVELOPMENT_TEAM` on iOS
 - `yarn start`
 - `yarn android` or `yarn ios`
 
