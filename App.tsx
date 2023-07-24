@@ -13,7 +13,7 @@ import {
 import ZoomUs, {ZoomEmitter, ZoomUsVideoView} from 'react-native-zoom-us';
 import {type NativeLayoutUnit} from 'react-native-zoom-us/native';
 
-import {extractDataFromJoinLink} from './extractDataFromJoinLink';
+import {extractDataFromJoinLink} from './api/extractDataFromJoinLink';
 
 import * as sdkJwtTokenJson from './api/sdk.jwt.json';
 import * as startMeetingJson from './api/api.startMeeting.json';
@@ -32,7 +32,7 @@ const sdkSecret = '';
 const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 
 // 2a. `TODO` Fill in start meeting data:
-// Replace userId, meetingNumber, zoomAccessToken in `./api/api.zak.json` manually
+// Replace meetingNumber and zoomAccessToken in `./api/api.jwt.json` manually
 // OR follow these instructions for getting data automatically for starting you personal meeting:
 // - Go to https://marketplace.zoom.us/develop/create and Create JWT App to get apiKey and apiSecret
 // - Replace your apiKey and apiSecret and run the following in the terminal:
@@ -41,7 +41,6 @@ const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 // - Run the following in the terminal:
 // yarn run api:get-startPersonalMeeting
 const exampleStartMeeting = {
-  userId: startMeetingJson.userId,
   meetingNumber: startMeetingJson.meetingNumber,
   zoomAccessToken: startMeetingJson.zoomAccessToken,
 };
@@ -192,7 +191,6 @@ const App = () => {
       const startMeetingResult = await ZoomUs.startMeeting({
         userName: 'John',
         meetingNumber: exampleStartMeeting.meetingNumber,
-        userId: exampleStartMeeting.userId,
         zoomAccessToken: exampleStartMeeting.zoomAccessToken,
         noMeetingErrorMessage: true, // Set this to be able to show Alert.alert
       });

@@ -21,7 +21,7 @@ const processRequest = async <Response>(url: URL) => {
 
   const json = (await response.json()) as Error | Response;
 
-  if ('code' in json) {
+  if (typeof json === 'object' && json && 'code' in json) {
     throw new Error(json.message);
   }
 
@@ -66,7 +66,6 @@ const main = async () => {
   }
 
   const data = {
-    userId: firstUser.id,
     meetingNumber: firstUser.pmi.toString(),
     zoomAccessToken: userTokenResponse.token,
   };

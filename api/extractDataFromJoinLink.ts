@@ -1,3 +1,5 @@
+import {URL} from 'react-native-url-polyfill';
+
 export const extractDataFromJoinLink = (link: string) => {
   const url = new URL(link);
 

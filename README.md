@@ -2,17 +2,19 @@
 
 Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/package/react-native-zoom-us).
 
-## Usage
+## Getting Started
+
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 - `yarn`
-- `nvm use`
 - on iOS only (requires at least Ruby@3.2.2):
   - `bundle install`
   - `cd ios/ && bundle exec pod install && cd ..`
 - Go to https://marketplace.zoom.us/develop/create and Create SDK App, then copy `sdkKey` and `sdkSecret`
 - Open `App.tsx` and look for `TODO` - update it with your `sdkKey`, `sdkSecret`.
-  - For `startMeeting` provide: `meetingNumber`, `userId`, and `zoomAccessToken`.
+  - For `startMeeting` provide: `meetingNumber` and `zoomAccessToken`.
   - For `joinMeeting` provide: `meetingNumber` and `password`
+- Change `DEVELOPMENT_TEAM` on iOS
 - `yarn start`
 - `yarn android` or `yarn ios`
 
@@ -27,8 +29,8 @@ Currently because of react-native symlink limitation the following must be done 
 
 ## Upgrading react-native
 
-This repository was generated using https://github.com/react-native-community/react-native-template-typescript
-Use diff between two versions of react-native to apply the changes, e.g. (https://github.com/react-native-community/react-native-template-typescript/compare/6.6.4...6.8.0). Use `/template/*` folder only
+This repository was generated using `npx react-native@0.72.2 init ZoomUsTest --version 0.72.2`.
+Use diff between two versions of react-native to apply the changes using https://react-native-community.github.io/upgrade-helper/.
 
 ## Smoke Test Procedure
 
