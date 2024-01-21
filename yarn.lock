@@ -5451,10 +5451,10 @@ react-native-url-polyfill@2.0.0:
   dependencies:
     whatwg-url-without-unicode "8.0.0-3"
 
-react-native-zoom-us@6.18.2:
-  version "6.18.2"
-  resolved "https://registry.yarnpkg.com/react-native-zoom-us/-/react-native-zoom-us-6.18.2.tgz#24a53c65787c7a7556f6a962eebbb703ceea44db"
-  integrity sha512-J9V+dr5StlMhCOfr3fVg+eZjkbJ3JRjlcEj/QRsw92euDGVwgA8bkS0JSPHBDZSggJsbQ+FqgSooBeMwgpFHjw==
+react-native-zoom-us@6.19.4:
+  version "6.19.4"
+  resolved "https://registry.yarnpkg.com/react-native-zoom-us/-/react-native-zoom-us-6.19.4.tgz#60f5ae1e04fae0bb387de16e3c6725fd83628400"
+  integrity sha512-/8g9UyVWVgG+Ek0zjYcgDcKnnJRKG6dTHeBvJBY0I/rdwx40xydIkJuLHYj8bmKY5luIINTGsHoNMG99njngww==
   dependencies:
     color "^3.2.1"
     invariant "^2.2.4"
