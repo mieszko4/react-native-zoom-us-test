@@ -18,17 +18,10 @@ import {extractDataFromJoinLink} from './api/extractDataFromJoinLink';
 import * as sdkJwtTokenJson from './api/sdk.jwt.json';
 import * as startMeetingJson from './api/api.startMeeting.json';
 
-// 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and Create SDK App then fill `sdkKey` and `sdkSecret`
-// There are TWO options to initialize zoom sdk: without jwt token OR with jwt token
-
-// 1a. without jwt token (quick start while developing)
-const sdkKey = '';
-const sdkSecret = '';
-
-// 1b. with jwt token (should be used in production)
-// - Replace you sdkKey and sdkSecret and run the following in the terminal:
+// 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and Create SDK App
+// - Replace your sdkKey and sdkSecret and run the following in the terminal:
 // SDK_KEY=sdkKey SDK_SECRET=sdkSecret yarn run sdk:get-jwt
-// This will fill up ./api/sdk.jwt.json that will be used instead of sdkKey and sdkSecret
+// This will fill up ./api/sdk.jwt.json used below
 const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 
 // 2a. `TODO` Fill in start meeting data:
@@ -141,9 +134,7 @@ const App = () => {
     (async () => {
       try {
         const initializeResult = await ZoomUs.initialize(
-          sdkJwtToken
-            ? {jwtToken: sdkJwtToken}
-            : {clientKey: sdkKey, clientSecret: sdkSecret},
+          {jwtToken: sdkJwtToken},
           {
             language: 'pt-PT',
             enableCustomizedMeetingUI,
