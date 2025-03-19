@@ -8,40 +8,45 @@
     "lint": "eslint .",
     "typecheck": "tsc",
     "start": "react-native start",
+    "debug-release": "react-native run-android --mode=Release",
     "test": "jest",
     "api:get-jwt": "npx ts-node api/getApiJwtToken.ts > ./api/api.jwt.json",
     "api:get-startPersonalMeeting": "npx ts-node api/startPersonalMeeting.ts > ./api/api.startMeeting.json",
     "sdk:get-jwt": "npx ts-node api/getSdkJwtToken.ts > ./api/sdk.jwt.json"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-native": "0.72.2",
+    "react": "18.3.1",
+    "react-native": "0.76.7",
     "react-native-url-polyfill": "2.0.0",
     "react-native-zoom-us": "9.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/runtime": "^7.20.0",
-    "@react-native/eslint-config": "^0.72.2",
-    "@react-native/metro-config": "^0.72.9",
-    "@tsconfig/react-native": "^3.0.0",
+    "@babel/core": "7.25.2",
+    "@babel/preset-env": "7.25.3",
+    "@babel/runtime": "7.25.0",
+    "@babel/traverse": "7.25.0",
+    "@react-native-community/cli": "15.0.1",
+    "@react-native-community/cli-platform-android": "15.0.1",
+    "@react-native-community/cli-platform-ios": "15.0.1",
+    "@react-native/babel-preset": "0.76.7",
+    "@react-native/eslint-config": "0.76.7",
+    "@react-native/metro-config": "0.76.7",
+    "@react-native/typescript-config": "0.76.7",
     "@types/jsonwebtoken": "9.0.2",
     "@types/node-fetch": "2.6.4",
-    "@types/react": "^18.0.24",
+    "@types/react": "18.2.6",
     "@types/react-test-renderer": "^18.0.0",
-    "babel-jest": "^29.2.1",
+    "babel-jest": "29.6.3",
     "eslint": "^8.19.0",
-    "jest": "^29.2.1",
+    "jest": "29.6.3",
     "jsonwebtoken": "9.0.1",
-    "metro-react-native-babel-preset": "0.76.7",
     "node-fetch": "2.6.12",
-    "prettier": "^2.4.1",
-    "react-test-renderer": "18.2.0",
+    "prettier": "2.8.8",
+    "react-test-renderer": "18.3.1",
     "ts-node": "10.9.2",
-    "typescript": "4.8.4"
+    "typescript": "5.0.4"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   }
 }
