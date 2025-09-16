@@ -9,7 +9,7 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 - Install at least node@16 
 - `corepack enable`
 - `yarn`
-- on iOS only (requires at least Ruby@3.2.2):
+- on iOS only (requires Ruby@3.2):
   - `bundle install`
   - `cd ios/ && bundle exec pod install && cd ..`
 - Go to https://marketplace.zoom.us/develop/create and Create SDK App, then copy `sdkKey` and `sdkSecret`
