@@ -6,6 +6,8 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
+- Install at least node@16 
+- `corepack enable`
 - `yarn`
 - on iOS only (requires at least Ruby@3.2.2):
   - `bundle install`
