@@ -6,7 +6,7 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-- Install at least node@16 
+- Install at least node@18 
 - `corepack enable`
 - `yarn`
 - on iOS only (requires Ruby@3.2):
@@ -36,7 +36,7 @@ Use diff between two versions of react-native to apply the changes using https:/
 
 ## Smoke Test Procedure
 
-The following procedure covers testing of the bridge (initialization and join meeting only).
+The following procedure covers testing of the bridge (join and start meeting).
 
 ### Android
 
