@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 import apiOauthTokenJson from './api.oauth.json';
 
 const baseUrl = 'https://api.zoom.us/v2';
