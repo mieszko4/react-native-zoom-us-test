@@ -1,11 +1,11 @@
-import {processRequest} from "./lib"
+import {processRequest} from './lib'
 
 type UserResponse = {
   id: string;
   pmi: number;
 };
 const getUser = async () => {
-  return processRequest<UserResponse>("/users/me");
+  return processRequest<UserResponse>('/users/me');
 };
 
 type UserTokenResponse = {
@@ -13,22 +13,22 @@ type UserTokenResponse = {
 };
 const getUserToken = async () => {
   const urlSearchParams = new URLSearchParams({
-    type: "zak",
-    ttl: "3600"
+    type: 'zak',
+    ttl: '3600'
   })
 
-  return processRequest<UserTokenResponse>("/users/me/token", urlSearchParams);
+  return processRequest<UserTokenResponse>('/users/me/token', urlSearchParams);
 };
 
 const main = async () => {
   const userResponse = await getUser();
   if (!userResponse || !userResponse.pmi) {
-    throw new Error("Could not find personal meeting id");
+    throw new Error('Could not find personal meeting id');
   }
 
   const userTokenResponse = await getUserToken();
   if (!userTokenResponse.token) {
-    throw new Error("Could not find token");
+    throw new Error('Could not find token');
   }
 
   const data = {

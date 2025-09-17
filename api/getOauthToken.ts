@@ -3,22 +3,21 @@ const getOauthToken = async (
   clientId: string,
   clientSecret: string,
 ) => {
-  const auth = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
+  const auth = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
 
-  const res = await fetch("https://zoom.us/oauth/token", {
-    method: "POST",
-    headers: new Headers({
-      "Content-Type": "application/x-www-form-urlencoded",
+  const res = await fetch('https://zoom.us/oauth/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: `Basic ${auth}`,
-    }),
+    },
     body: new URLSearchParams({
-      grant_type: "account_credentials",
+      grant_type: 'account_credentials',
       account_id: accountId,
     }).toString(),
   })
 
   if (res.status !== 200) {
-    console.log(await res.text())
     throw new Error('Invalid response');
   }
 

@@ -36,7 +36,7 @@ Use diff between two versions of react-native to apply the changes using https:/
 
 ## Smoke Test Procedure
 
-The following procedure covers testing of the bridge (initialization and join meeting only).
+The following procedure covers testing of the bridge (join and start meeting).
 
 ### Android
 
