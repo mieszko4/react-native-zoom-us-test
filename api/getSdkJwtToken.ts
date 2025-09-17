@@ -34,3 +34,6 @@ const jwtToken = getSdkJwtToken(
 );
 
 console.log(JSON.stringify({jwtToken}, null, 2));
+
+// Do not treat it as a global script
+export {}

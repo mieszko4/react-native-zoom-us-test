@@ -1,12 +1,12 @@
 import fetch from 'node-fetch';
 
-import apiJwtTokenJson from './api.jwt.json';
+import apiOauthTokenJson from './api.oauth.json';
 
 const baseUrl = 'https://api.zoom.us/v2';
 const headers = {
   'User-Agent': 'React-Native-Zoom-Us-Test',
   'Content-Type': 'application/json',
-  Authorization: `Bearer ${apiJwtTokenJson.jwtToken}`,
+  Authorization: `Bearer ${apiOauthTokenJson.oauthToken.access_token}`,
 };
 
 type Error = {
@@ -74,3 +74,6 @@ const main = async () => {
 };
 
 main().catch(e => console.error(e));
+
+// Do not treat it as a global script
+export {}

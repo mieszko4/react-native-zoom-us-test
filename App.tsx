@@ -18,19 +18,19 @@ import {extractDataFromJoinLink} from './api/extractDataFromJoinLink';
 import * as sdkJwtTokenJson from './api/sdk.jwt.json';
 import * as startMeetingJson from './api/api.startMeeting.json';
 
-// 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and Create SDK App
+// 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and create Meeting SDK App
 // - Replace your sdkKey and sdkSecret and run the following in the terminal:
 // SDK_KEY=sdkKey SDK_SECRET=sdkSecret yarn run sdk:get-jwt
 // This will fill up ./api/sdk.jwt.json used below
 const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 
 // 2a. `TODO` Fill in start meeting data:
-// Replace meetingNumber and zoomAccessToken in `./api/api.jwt.json` manually
+// Replace meetingNumber and zoomAccessToken in `./api/api.startMeeting.json` manually
 // OR follow these instructions for getting data automatically for starting you personal meeting:
-// - Go to https://marketplace.zoom.us/develop/create and Create JWT App to get apiKey and apiSecret
-// - Replace your apiKey and apiSecret and run the following in the terminal:
-// API_KEY=apiKey API_SECRET=apiSecret yarn run api:get-jwt
-// This will create JWT token in `./api/api.jwt.json` that you can use for the step of getting your personal meeting data.
+// - Go to https://marketplace.zoom.us/develop/create and create Server to Server OAuth App with user:read:token:admin and user:read:user:admin scopes
+// - Replace your accountId, clientId and clientSecret and run the following in the terminal:
+// ACCOUNT_ID=accountId CLIENT_ID=clientId CLIENT_SECRET=clientSecret yarn run api:get-oauth
+// This will create oauth token in `./api/api.oauth.json` that you can use for the next step of getting your personal meeting data.
 // - Run the following in the terminal:
 // yarn run api:get-startPersonalMeeting
 const exampleStartMeeting = {

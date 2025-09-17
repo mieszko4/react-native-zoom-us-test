@@ -9,7 +9,7 @@
     "typecheck": "tsc",
     "start": "react-native start",
     "test": "jest",
-    "api:get-jwt": "npx ts-node api/getApiJwtToken.ts > ./api/api.jwt.json",
+    "api:get-oauth": "npx ts-node api/getOauthToken.ts > ./api/api.oauth.json",
     "api:get-startPersonalMeeting": "npx ts-node api/startPersonalMeeting.ts > ./api/api.startMeeting.json",
     "sdk:get-jwt": "npx ts-node api/getSdkJwtToken.ts > ./api/sdk.jwt.json"
   },
@@ -42,7 +42,7 @@
     "typescript": "4.8.4"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "packageManager": "yarn@1.22.22"
 }
