@@ -28,24 +28,21 @@ const processRequest = async <Response>(url: URL) => {
   return json;
 };
 
-type UsersResponse = {
-  users: {
-    pmi: string;
-    id: string;
-  }[];
+type UserResponse = {
+  id: string;
+  pmi: number;
 };
-const getUsers = async () => {
-  const url = new URL(`${baseUrl}/users`);
-  url.searchParams.append('status', 'active');
+const getUser = async () => {
+  const url = new URL(`${baseUrl}/users/me`);
 
-  return processRequest<UsersResponse>(url);
+  return processRequest<UserResponse>(url);
 };
 
 type UserTokenResponse = {
   token: string;
 };
-const getUserToken = async (id: string) => {
-  const url = new URL(`${baseUrl}/users/${id}/token`);
+const getUserToken = async () => {
+  const url = new URL(`${baseUrl}/users/me/token`);
   url.searchParams.append('type', 'zak');
   url.searchParams.append('ttl', '3600');
 
@@ -53,20 +50,18 @@ const getUserToken = async (id: string) => {
 };
 
 const main = async () => {
-  const usersResponse = await getUsers();
-
-  const [firstUser] = usersResponse.users || [];
-  if (!firstUser || !firstUser.pmi || !firstUser.id) {
-    throw new Error('Could not find user with personal meeting id');
+  const userResponse = await getUser();
+  if (!userResponse || !userResponse.pmi) {
+    throw new Error('Could not find personal meeting id');
   }
 
-  const userTokenResponse = await getUserToken(firstUser.id);
+  const userTokenResponse = await getUserToken();
   if (!userTokenResponse.token) {
     throw new Error('Could not find token');
   }
 
   const data = {
-    meetingNumber: firstUser.pmi.toString(),
+    meetingNumber: userResponse.pmi.toString(),
     zoomAccessToken: userTokenResponse.token,
   };
 
