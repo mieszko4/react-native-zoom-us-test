@@ -16,7 +16,7 @@ import {type NativeLayoutUnit} from 'react-native-zoom-us/native';
 import {extractDataFromJoinLink} from './api/extractDataFromJoinLink';
 
 import * as sdkJwtTokenJson from './api/sdk.jwt.json';
-import * as startMeetingJson from './api/api.startMeeting.json';
+import * as personalMeetingJson from './api/api.personalMeeting.json';
 
 // 1. `TODO`: Go to https://marketplace.zoom.us/develop/create and create Meeting SDK App
 // - Replace your sdkKey and sdkSecret and run the following in the terminal:
@@ -25,17 +25,17 @@ import * as startMeetingJson from './api/api.startMeeting.json';
 const sdkJwtToken = sdkJwtTokenJson.jwtToken;
 
 // 2a. `TODO` Fill in start meeting data:
-// Replace meetingNumber and zoomAccessToken in `./api/api.startMeeting.json` manually
+// Replace meetingNumber and zoomAccessToken in `./api/api.personalMeeting.json` manually
 // OR follow these instructions for getting data automatically for starting you personal meeting:
 // - Go to https://marketplace.zoom.us/develop/create and create Server to Server OAuth App with user:read:token:admin and user:read:user:admin scopes
 // - Replace your accountId, clientId and clientSecret and run the following in the terminal:
 // ACCOUNT_ID=accountId CLIENT_ID=clientId CLIENT_SECRET=clientSecret yarn run api:get-oauth
 // This will create oauth token in `./api/api.oauth.json` that you can use for the next step of getting your personal meeting data.
 // - Run the following in the terminal:
-// yarn run api:get-startPersonalMeeting
+// yarn run api:get-personal-meeting
 const exampleStartMeeting = {
-  meetingNumber: startMeetingJson.meetingNumber,
-  zoomAccessToken: startMeetingJson.zoomAccessToken,
+  meetingNumber: personalMeetingJson.meetingNumber,
+  zoomAccessToken: personalMeetingJson.zoomAccessToken,
 };
 
 // 2b. `TODO` Fill in invite link:

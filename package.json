@@ -10,7 +10,7 @@
     "start": "react-native start",
     "test": "jest",
     "api:get-oauth": "npx ts-node api/getOauthToken.ts > ./api/api.oauth.json",
-    "api:get-startPersonalMeeting": "npx ts-node api/startPersonalMeeting.ts > ./api/api.startMeeting.json",
+    "api:get-personal-meeting": "npx ts-node api/getPersonalMeeting.ts > ./api/api.personalMeeting.json",
     "sdk:get-jwt": "npx ts-node api/getSdkJwtToken.ts > ./api/sdk.jwt.json"
   },
   "dependencies": {
