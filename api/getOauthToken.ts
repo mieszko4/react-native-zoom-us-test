@@ -33,6 +33,3 @@ getOauthToken(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
 ).then(oauthToken => console.log(JSON.stringify({oauthToken}, null, 2)));
-
-// Do not treat it as a global script
-export {}

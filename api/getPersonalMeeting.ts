@@ -40,6 +40,3 @@ const main = async () => {
 };
 
 main().catch(e => console.error(e));
-
-// Do not treat it as a global script
-export {}
