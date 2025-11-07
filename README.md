@@ -4,7 +4,7 @@ Example repository of using [react-native-zoom-us bridge](https://www.npmjs.com/
 
 ## Getting Started
 
-> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
 - Install at least node@18 
 - `corepack enable`
