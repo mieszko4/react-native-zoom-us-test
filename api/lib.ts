@@ -26,7 +26,7 @@ const processRequest = async <Response>(endpoint: string, urlSearchParams = new 
     throw new Error(json.message);
   }
 
-  return json;
+  return json as Response;
 };
 
 export {processRequest}

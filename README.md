@@ -47,7 +47,7 @@ The following procedure covers testing of the bridge (join and start meeting).
 #### Real Device
 
 1. [ ] Development: `yarn android`
-2. [ ] Release: `yarn android --variant=release`
+2. [ ] Release: `yarn android --mode=release`
 
 ### iOS
 
