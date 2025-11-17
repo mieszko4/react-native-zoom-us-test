@@ -9,6 +9,7 @@ import {
   NativeEventEmitter,
   Platform,
 } from 'react-native';
+import Video from 'react-native-video';
 
 import ZoomUs, {ZoomEmitter} from 'react-native-zoom-us';
 
@@ -131,6 +132,11 @@ const App = () => {
   return (
     <>
       <View style={styles.container}>
+        <Video
+          source={{ uri: 'https://www.w3schools.com/html/mov_bbb.mp4' }}
+          style={{ width: '100%', aspectRatio: 16 / 9 }}
+          controls
+        />
         <Button
           onPress={() => startMeeting()}
           title="Start example meeting"

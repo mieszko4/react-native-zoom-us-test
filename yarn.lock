@@ -3282,6 +3282,7 @@ __metadata:
     react: 18.3.1
     react-native: 0.77.3
     react-native-url-polyfill: 2.0.0
+    react-native-video: ^6.17.0
     react-native-zoom-us: 15.0.0
     react-test-renderer: 18.3.1
     ts-node: 10.9.2
@@ -8182,6 +8183,16 @@ __metadata:
   peerDependencies:
     react-native: "*"
   checksum: 1a2e1030a62fd093764b5330ce0ff34d72246e581dd2892cddc347d8621931aeb2c9ea3e054960484a1259230e8461e569e1890f1ff452d3c5c0adef70190fc3
+  languageName: node
+  linkType: hard
+
+"react-native-video@npm:^6.17.0":
+  version: 6.17.0
+  resolution: "react-native-video@npm:6.17.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 36cb907b9d96aabe5878214a3be3d1b70fdc504e5e8f9276d892a8e76dc8cfc98c48223ea99b5e1f70e5da547a0047b9a82d9406bd3996897ff421a52ea98656
   languageName: node
   linkType: hard
 
