@@ -1499,12 +1499,12 @@ PODS:
     - React-logger (= 0.77.3)
     - React-perflogger (= 0.77.3)
     - React-utils (= 0.77.3)
-  - RNZoomUs (13.0.0):
+  - RNZoomUs (14.0.0):
     - React
-    - ZoomSDK (= 6.4.10.25465)
+    - ZoomSDK (= 6.5.10.27930)
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
-  - ZoomSDK (6.4.10.25465)
+  - ZoomSDK (6.5.10.27930)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -1785,10 +1785,10 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: 31015410a4a53b9fd0a908ad4d6e3e2b9a25086a
   ReactCodegen: eac5d74d85dff515b48a5c36f154bc4128f217e6
   ReactCommon: bf4612cba0fa356b529385029f470d5529dddde4
-  RNZoomUs: 3e7e04863001bdfbc8f8b9a9b692a4da6b2322ce
+  RNZoomUs: 7639191bb66992385baa367be5de337255a1c3fb
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 92f3bb322c40a86b7233b815854730442e01b8c4
-  ZoomSDK: 982cb2d0305d583185f4b97877b82af27899bd36
+  ZoomSDK: 6b1fb2bf09d924cf5bf372a933255334bfa35430
 
 PODFILE CHECKSUM: 853c3b11bfaba309950d1fdd1523951ae2368c8f
 
