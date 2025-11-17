@@ -8,5 +8,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:remove="android:networkSecurityConfig"
         tools:replace="android:usesCleartextTraffic"
-    />
+    >
+        <property android:name="android.net.PROPERTY_SELF_CERTIFIED_NETWORK_CAPABILITIES" android:resource="@xml/network_capabilities" />
+    </application>
 </manifest>
