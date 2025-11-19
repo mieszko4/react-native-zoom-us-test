@@ -17,7 +17,7 @@
     "react": "19.0.0",
     "react-native": "0.79.7",
     "react-native-url-polyfill": "2.0.0",
-    "react-native-zoom-us": "15.0.0"
+    "react-native-zoom-us": "15.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
