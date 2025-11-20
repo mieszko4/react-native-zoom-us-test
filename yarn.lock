@@ -3233,7 +3233,7 @@ __metadata:
     react: 19.0.0
     react-native: 0.79.7
     react-native-url-polyfill: 2.0.0
-    react-native-zoom-us: 15.1.0
+    react-native-zoom-us: 16.1.0
     react-test-renderer: 19.0.0
     ts-node: 10.9.2
     typescript: 5.0.4
@@ -8171,16 +8171,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-zoom-us@npm:15.1.0":
-  version: 15.1.0
-  resolution: "react-native-zoom-us@npm:15.1.0"
+"react-native-zoom-us@npm:16.1.0":
+  version: 16.1.0
+  resolution: "react-native-zoom-us@npm:16.1.0"
   dependencies:
     color: ^3.2.1
     invariant: ^2.2.4
   peerDependencies:
     react: ">=16.8.0"
     react-native: ">0.60.0"
-  checksum: 86dfbbfac88e2b923c059482d15151b361e0bb87640e0631007e67445e7d90b8e9990a86a9607933d73590937331d32a5e6fa2a6745c783fc789e3fa5d15e27f
+  checksum: d58fc6dbc73dcadd2d1f6fc6cd53c5788626026eca0be642882d6fe821dce68f5a13d9e775b7c395bbe08512318cfbf880e79d60f151f0dbcf23016d3f389eff
   languageName: node
   linkType: hard
 
